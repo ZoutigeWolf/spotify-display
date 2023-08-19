@@ -43,11 +43,13 @@ def fetch_data(client: spotipy.Spotify) -> dict:
 
 def main():
     sp = spotipy.Spotify(auth_manager=sp_auth)
-    print("a")
 
     while True:
         data = fetch_data(sp)
+
         print(data)
+        # TODO: Send data to LED matrix
+
         time.sleep(1 - (data["offset"] / 1000))
 
 
