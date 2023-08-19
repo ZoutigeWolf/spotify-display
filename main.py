@@ -4,7 +4,9 @@ from spotipy.oauth2 import SpotifyOAuth
 
 from zouti_utils.json import load_json
 
-SCOPE = "user-read-playback-state"
+SCOPES = [
+    "user-read-playback-state"
+]
 
 config = load_json("config.json")
 
@@ -12,7 +14,7 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(
     client_id=config["spotify_client_id"],
     client_secret=config["spotify_client_secret"],
     redirect_uri=config["spotify_redirect_uri"],
-    scope=SCOPE
+    scope=",".join(SCOPES)
 ))
 
 
