@@ -4,8 +4,8 @@ A Python program to display your current Spotify playing status on an LED matrix
 
 
 ## Configuration
-The program communicates with the Spotify API through a Spotify app you have to create yourself.
-After creating the app, store the credentials in the config file.
+The program communicates with the Spotify API through a Spotify app.
+The credentials for this app are stored in the `config.json` file in the working directory of the program.
 
 
 #### config.json
